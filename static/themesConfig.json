@@ -12,64 +12,19 @@
     "defaultBackgroundLayers": [],
     "defaultSearchProviders": ["coordinates"],
     "defaultMapCrs": "EPSG:3857",
-    "defaultTheme": "qwc_demo",
+    "defaultTheme": "chez",
     "themes": {
         "items": [
             {
-                "id": "qwc_demo",
-                "title": "QWC Demo Theme",
-                "url": "http://qwc2.sourcepole.ch/ows/qwc_demo",
-                "attribution": "Demo attribution",
-                "attributionUrl": "https://example.com/",
-                "backgroundLayers": [
-                    {"name": "bluemarble", "printLayer": "bluemarble_bg", "visibility": true},
-                    {"name": "mapnik", "printLayer": "osm_bg"}
-                ],
-                "searchProviders": [
-                    "coordinates",
-                    "nominatim",
-                    {
-                        "provider": "fulltext",
-                        "params": {
-                            "default": ["ne_10m_admin_0_countries"]
-                        }
-                    }
-                ],
-                "mapCrs": "EPSG:3857",
-                "additionalMouseCrs": [],
-                "extent": [-1000000,4000000,3000000,8000000],
-                "printResolutions": [100, 300],
-                "thumbnail": "qwc_demo.jpg",
-                "featureReport": {
-                    "countries": "Country"
-                },
-                "predefinedFilters": [{
-                    "id": "continent_filter",
-                    "title": "Continent",
-                    "filter": {
-                        "countries": ["continent", "=", "$continent$"]
-                    },
-                    "fields": [{
-                        "id": "continent",
-                        "title": "Name",
-                        "defaultValue": "",
-                        "inputConfig": {"type": "select", "options": ["Africa", "Asia", "Europe", "Oceania"]}
-                    }]
-                }],
-                "extraLegendParameters": "LAYERTITLE=FALSE",
-                "defaultPrintLayout": "A4 Landscape"
+            "id": "chez",
+            "title": "ChEZ",
+            "url": "http://localhost:8088/ows/scan/chez",
+            "backgroundLayers": [],
+            "searchProviders": ["coordinates"],
+            "mapCrs": "EPSG:3857"
             }
         ],
         "backgroundLayers": [
-            {
-                "name": "mapnik",
-                "title": "Open Street Map",
-                "type": "osm",
-                "source": "osm",
-                "attribution": "OpenStreetMap contributors",
-                "attributionUrl": "https://www.openstreetmap.org/copyright",
-                "thumbnail": "img/mapthumbs/mapnik.jpg"
-            },
             {
                 "type": "wmts",
                 "url": "http://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief/default/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg",
