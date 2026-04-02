@@ -1,5 +1,5 @@
 {
-    "name": "qwc2-demo-app",
+    "name": "qwc2-app",
     "version": "2026.02.16",
     "description": "Demo application based on QGIS Web Client",
     "author": "Sourcepole",
@@ -34,19 +34,17 @@
         "source-map-loader": "^5.0.0",
         "style-loader": "^4.0.0",
         "typescript": "^5.9.3",
-        "webpack": "^5.105.0",
+        "webpack": "^5.105.4",
         "webpack-bundle-analyzer": "^5.2.0",
         "webpack-cli": "^6.0.1",
         "webpack-dev-server": "^5.2.3"
     },
     "scripts": {
-        "prod": "npm run tsupdate && npm run themesconfig && npm run iconfont && webpack --mode production --progress",
-        "start": "npm run tsupdate && npm run themesconfig && npm run iconfont && webpack serve --mode development --progress --host 0.0.0.0 --port 8081",
-        "iconfont": "npx qwc_build_iconfont",
-        "themesconfig": "npx qwc_gen_themesconfig",
-        "tsupdate": "npx qwc_update_translations",
-        "build": "npm run prod",
-        "analyze": "webpack --mode production --progress --env ANALYZE=1",
-        "release": "node -e \"process.exit(require('os').platform() === 'win32' ? 0 : 1)\" && qwc2\\scripts\\package-commands.bat release || ./qwc2/scripts/package-commands.sh release"
+        "start": "./node_modules/.bin/webpack serve --mode development --open",
+        "build": "./node_modules/.bin/webpack --mode production && rsync -a --delete ./prod/ ../volumes/qwc2-custom/",
+
+        "build:local": "webpack --mode production",
+        "sync:deploy": "rsync -a --delete ./prod/ ../volumes/qwc2-custom/",
+        "build:deploy": "npm run build:local && npm run sync:deploy"
     }
 }
