@@ -1,0 +1,61 @@
+{
+  "themes": {
+    "items": [
+      {
+        "id": "titiler-landscape",
+        "name": "titiler-landscape",
+        "title": "TiTiler Landscape",
+        "url": "/ows",
+        "version": "1.3.0",
+        "mapCrs": "EPSG:3857",
+        "bbox": {
+          "crs": "EPSG:4326",
+          "bounds": [
+            29.171126,
+            51.00608,
+            30.641894,
+            51.597045
+          ]
+        },
+        "initialBbox": {
+          "crs": "EPSG:4326",
+          "bounds": [
+            29.171126,
+            51.00608,
+            30.641894,
+            51.597045
+          ]
+        },
+        "sublayers": [],
+        "backgroundLayers": [
+          {
+            "name": "titiler_landscape",
+            "visibility": true
+          }
+        ],
+        "searchProviders": [
+          "coordinates"
+        ],
+        "externalLayers": [],
+        "drawingOrder": [],
+        "expanded": true,
+        "thumbnail": "img/mapthumbs/default.jpg"
+      }
+    ],
+    "backgroundLayers": [
+      {
+        "name": "titiler_landscape",
+        "title": "TiTiler landscape",
+        "type": "xyz",
+        "url": "http://localhost:8088/titiler/cog/tiles/WebMercatorQuad/{z}/{x}/{y}.png?url=http://qwc-api-gateway/rasters/landscapes.tif&rescale=0,7",
+        "projection": "EPSG:3857",
+        "tileSize": 256,
+        "attribution": {
+          "Title": "TiTiler",
+          "OnlineResource": null
+        },
+        "thumbnail": "img/mapthumbs/default.jpg"
+      }
+    ]
+  }
+}

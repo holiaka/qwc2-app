@@ -20,7 +20,7 @@
   "omitUrlParameterUpdates": false,
   "preserveExtentOnThemeSwitch": true,
   "preserveBackgroundOnThemeSwitch": true,
-  "preserveNonThemeLayersOnThemeSwitch": false,
+  "preserveNonThemeLayersOnThemeSwitch": true,
   "storeAllLayersInPermalink": false,
   "allowReorderingLayers": true,
   "preventSplittingGroupsWhenReordering": false,
@@ -279,6 +279,9 @@
         }
       },
       {
+        "name": "MeteoRaster"
+      },
+      {
         "name": "NewsPopup",
         "cfg": {
           "newsDocument": "https://qwc-services.github.io/master/release_notes/ChangeLog/",
@@ -287,27 +290,6 @@
       },
       {
         "name": "OverviewMap"
-      },
-      {
-        "name": "Portal",
-        "cfg": {
-          "logo": "logo.svg",
-          "topBarText": "",
-          "showMenuOnStartup": true,
-          "keepMenuOpen": true,
-          "bottomBarLinks": [
-              {"href": "https://qwc-services.github.io/", "label": "Homepage", "target": "iframe"},
-              {"href": "https://qgis.org", "label": "QGIS.org"}
-          ],
-          "menuItems": [
-              {"title": "Homepage", "icon": "info", "url": "https://qwc-services.github.io/", "target": "iframe"},
-              {"key": "Tools", "icon": "tools", "title": "Links", "subitems": [
-                {"icon": "link", "title": "qwc2", "url": "https://github.com/qgis/qwc2/"},
-                {"icon": "link", "title": "qwc-docker", "url": "https://github.com/qwc-services/qwc-docker"},
-                {"icon": "link", "title": "qgis.org", "url": "https://qgis.org"}
-              ]}
-          ]
-        }
       },
       {
         "name": "Print",
@@ -332,7 +314,6 @@
         "name": "TopBar",
         "cfg": {
           "menuItems": [
-            {"key": "Portal", "icon": "themes"},
             {"key": "ThemeSwitcher", "icon": "themes", "shortcut": "alt+shift+t"},
             {"key": "LayerTree", "icon": "layers", "shortcut": "alt+shift+l"},
             {"key": "MapLegend", "icon": "list-alt"},
@@ -343,6 +324,7 @@
             {"key": "Tools", "icon": "tools", "subitems": [
               {"key": "Identify", "icon": "identify_region", "mode": "Region"},
               {"key": "TimeManager", "icon": "clock"},
+              {"key": "MeteoRaster", "icon": "rasterexport"},
               {"key": "Measure", "icon": "measure"},
               {"key": "Redlining", "icon": "draw"},
               {"key": "Editing", "icon": "editing"},

@@ -40,10 +40,11 @@
         "webpack-dev-server": "^5.2.3"
     },
     "scripts": {
-        "start": "./node_modules/.bin/webpack serve --mode development --open",
+        "start": "npm run sync:generated-themes && ./node_modules/.bin/webpack serve --mode development --open",
         "build": "./node_modules/.bin/webpack --mode production && rsync -a --delete ./prod/ ../volumes/qwc2-custom/",
 
-        "build:local": "webpack --mode production",
+        "sync:generated-themes": "node scripts/sync-generated-qwc-config.js",
+        "build:local": "npm run sync:generated-themes && webpack --mode production",
         "sync:deploy": "rsync -a --delete ./prod/ ../volumes/qwc2-custom/",
         "build:deploy": "npm run build:local && npm run sync:deploy"
     }

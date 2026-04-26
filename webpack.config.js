@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
       port: 8081,
       proxy: [
         {
-          context: ["/api", "/auth", "/ows", "/assets"],
+          context: ["/api", "/auth", "/fastapi", "/ows", "/assets", "/titiler"],
           target: "http://localhost:8088",
           changeOrigin: true,
         },

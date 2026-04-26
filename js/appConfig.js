@@ -29,7 +29,6 @@ import GeometryDigitizerPlugin from 'qwc2/plugins/GeometryDigitizer';
 import HeightProfilePlugin from 'qwc2/plugins/HeightProfile';
 import HelpPlugin from 'qwc2/plugins/Help';
 import HomeButtonPlugin from 'qwc2/plugins/HomeButton';
-import IdentifyPlugin from 'qwc2/plugins/Identify';
 import LayerCatalogPlugin from 'qwc2/plugins/LayerCatalog';
 import LayerTreePlugin from 'qwc2/plugins/LayerTree';
 import LocateButtonPlugin from 'qwc2/plugins/LocateButton';
@@ -42,6 +41,7 @@ import MapInfoTooltipPlugin from 'qwc2/plugins/MapInfoTooltip';
 import MapLegendPlugin from 'qwc2/plugins/MapLegend';
 import MapTipPlugin from 'qwc2/plugins/MapTip';
 import MeasurePlugin from 'qwc2/plugins/Measure';
+import MeteoRasterPlugin from './MeteoRasterPlugin';
 import NewsPopupPlugin from 'qwc2/plugins/NewsPopup';
 import ObjectListPlugin from 'qwc2/plugins/ObjectList';
 import ObliqueViewPlugin from 'qwc2/plugins/ObliqueView';
@@ -54,6 +54,7 @@ import RoutingPlugin from 'qwc2/plugins/Routing';
 import ScratchDrawingPlugin from 'qwc2/plugins/ScratchDrawing';
 import SettingsPlugin from 'qwc2/plugins/Settings';
 import SharePlugin from 'qwc2/plugins/Share';
+import ScopedIdentifyPlugin from './ScopedIdentifyPlugin';
 import StartupMarkerPlugin from 'qwc2/plugins/StartupMarker';
 import TaskButtonPlugin from 'qwc2/plugins/TaskButton';
 import ThemeSwitcherPlugin from 'qwc2/plugins/ThemeSwitcher';
@@ -100,7 +101,7 @@ export default {
             HeightProfilePlugin: HeightProfilePlugin,
             HelpPlugin: HelpPlugin(),
             HomeButtonPlugin: HomeButtonPlugin,
-            IdentifyPlugin: IdentifyPlugin,
+            IdentifyPlugin: ScopedIdentifyPlugin,
             LayerCatalogPlugin: LayerCatalogPlugin,
             LayerTreePlugin: LayerTreePlugin,
             LocateButtonPlugin: LocateButtonPlugin,
@@ -112,6 +113,7 @@ export default {
             MapLegendPlugin: MapLegendPlugin,
             MapTipPlugin: MapTipPlugin,
             MeasurePlugin: MeasurePlugin,
+            MeteoRasterPlugin: MeteoRasterPlugin,
             NewsPopupPlugin: NewsPopupPlugin,
             ObjectListPlugin: ObjectListPlugin(/* CustomEditingInterface */),
             ObliqueViewPlugin: ObliqueViewPlugin,
