@@ -5,7 +5,11 @@
         "id": "titiler-landscape",
         "name": "titiler-landscape",
         "title": "TiTiler Landscape",
-        "url": "/ows",
+        "url": "/ows/scan/chez",
+        "wms_name": "scan/chez",
+        "featureInfoUrl": "/api/v1/featureinfo/scan/chez?",
+        "legendUrl": "/api/v1/legend/scan/chez?",
+        "printUrl": "/ows/scan/chez?",
         "version": "1.3.0",
         "mapCrs": "EPSG:3857",
         "bbox": {
@@ -26,7 +30,37 @@
             51.597045
           ]
         },
-        "sublayers": [],
+        "sublayers": [
+          {
+            "name": "firms_thermal_anomalies",
+            "title": "FIRMS thermal anomalies",
+            "visibility": true,
+            "geometryType": "Point",
+            "category_sublayer": false,
+            "queryable": true,
+            "styles": {
+              "default": "default"
+            },
+            "style": "default",
+            "displayField": "acq_datetime",
+            "opacity": 255,
+            "bbox": {
+              "crs": "EPSG:4326",
+              "bounds": [
+                27.836581,
+                50.185191,
+                31.99241,
+                52.418571
+              ]
+            },
+            "dimensions": [],
+            "attribution": {
+              "Title": "NASA FIRMS",
+              "OnlineResource": null
+            },
+            "refreshInterval": 900000
+          }
+        ],
         "backgroundLayers": [
           {
             "name": "titiler_landscape",
@@ -37,7 +71,9 @@
           "coordinates"
         ],
         "externalLayers": [],
-        "drawingOrder": [],
+        "drawingOrder": [
+          "firms_thermal_anomalies"
+        ],
         "expanded": true,
         "thumbnail": "img/mapthumbs/default.jpg"
       }

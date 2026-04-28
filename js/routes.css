@@ -1,0 +1,157 @@
+.qwc-route-page {
+    min-height: 100vh;
+    background: #f4f6f8;
+    color: #17202a;
+    font-family: Arial, sans-serif;
+}
+
+.qwc-route-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 56px;
+    padding: 0 24px;
+    background: #26313d;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.qwc-route-nav a {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.qwc-route-nav a:hover,
+.qwc-route-nav a:focus {
+    background: rgba(255, 255, 255, 0.14);
+    outline: none;
+}
+
+.qwc-route-content {
+    max-width: 880px;
+    padding: 56px 32px;
+}
+
+.qwc-route-content h1 {
+    margin: 0 0 16px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.qwc-route-content h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.qwc-route-content p {
+    max-width: 640px;
+    margin: 0;
+    color: #40505f;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.qwc-route-kicker {
+    margin-bottom: 8px;
+    color: #647382;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.qwc-route-panel {
+    max-width: 680px;
+    margin-top: 28px;
+    padding: 20px;
+    border: 1px solid #d7dde4;
+    background: #ffffff;
+}
+
+.qwc-route-panel p,
+.qwc-route-panel li {
+    color: #40505f;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.qwc-route-panel ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.qwc-route-form {
+    display: grid;
+    gap: 14px;
+    max-width: 420px;
+    margin-top: 28px;
+}
+
+.qwc-route-form label {
+    display: grid;
+    gap: 6px;
+    color: #27333f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.qwc-route-form input {
+    min-height: 40px;
+    border: 1px solid #c9d1da;
+    background: #ffffff;
+    color: #17202a;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
+.qwc-route-form input:focus {
+    border-color: #4f6f8f;
+    outline: 2px solid rgba(79, 111, 143, 0.2);
+}
+
+.qwc-route-form button {
+    min-height: 42px;
+    border: 0;
+    background: #2f5d7c;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+.qwc-route-form button:hover,
+.qwc-route-form button:focus {
+    background: #254b65;
+    outline: none;
+}
+
+@media (max-width: 640px) {
+    .qwc-route-nav {
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 8px 12px;
+    }
+
+    .qwc-route-nav a {
+        font-size: 13px;
+        padding: 9px 8px;
+    }
+
+    .qwc-route-content {
+        padding: 36px 20px;
+    }
+
+    .qwc-route-content h1 {
+        font-size: 26px;
+    }
+
+    .qwc-route-panel {
+        padding: 16px;
+    }
+}
